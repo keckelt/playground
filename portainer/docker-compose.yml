@@ -1,0 +1,10 @@
+version: '2'
+services:
+  portainer:
+    image: portainer/portainer:latest
+    restart: always
+    command: --no-auth
+    ports:
+    - '9999:9000'
+    volumes:
+    - '/var/run/docker.sock:/var/run/docker.sock'
