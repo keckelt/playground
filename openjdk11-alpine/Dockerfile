@@ -6,7 +6,7 @@ ENV LANG C.UTF-8
 
 # There might be newer builds, but not all are published (for apline) at: http://jdk.java.net/11/
 
-ENV JAVA_HOME /jdk-11
+ENV JAVA_HOME="/jdk-11"
 ENV JDK_BUILD="22"
 ENV JDK_ARCHIVE="openjdk-11-ea+${JDK_BUILD}_linux-x64-musl_bin.tar.gz"
 
@@ -30,10 +30,6 @@ RUN echo "Extract JDK"
 RUN tar -xzf ${JDK_ARCHIVE}
 # Remove downlaoded files
 RUN rm ${JDK_ARCHIVE} ${JDK_ARCHIVE}.sha256
-
-RUN ls
-RUN ls ${JAVA_HOME}
-
 
 ENV PATH=$PATH:${JAVA_HOME}/bin
 
