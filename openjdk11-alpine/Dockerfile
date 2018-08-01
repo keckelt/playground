@@ -29,7 +29,9 @@ RUN echo "Checksum is correct"
 RUN echo "Extract JDK"
 RUN tar -xzf ${JDK_ARCHIVE}
 # Remove downlaoded files
-RUN rm ${JDK_ARCHIVE} ${JDK_ARCHIVE}.sha256 ${JAVA_HOME}/lib/src.zip
+RUN rm ${JDK_ARCHIVE} ${JDK_ARCHIVE}.sha256 
+# Remove src.zip to reduce size
+RUN RM ${JAVA_HOME}/lib/src.zip
 
 ENV PATH=$PATH:${JAVA_HOME}/bin
 
