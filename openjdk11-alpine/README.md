@@ -1,3 +1,10 @@
+# New Repo
+I moved this to a separate repo: https://github.com/keckelt/openjdk11-alpine
+
+----
+
+
+
 # Build
 ```
 docker build -t alpine-jdk11 .
