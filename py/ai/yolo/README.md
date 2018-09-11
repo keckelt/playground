@@ -28,7 +28,7 @@ pip install -e .
 cd ..
 ```
 
-# Run
+# Process Video
 ## Yolo v2 (608x608)
 Download weights and config from [Joseph Redmon](https://pjreddie.com/darknet/yolo/).
 ```console
@@ -101,4 +101,15 @@ wget https://raw.githubusercontent.com/pjreddie/darknet/master/data/voc.names -O
 Get some video (`video.mp4`) and run:
 ```console
 flow --model bin/prjeddie/yolov2-tiny-voc.cfg --load bin/prjeddie/yolov2-tiny-voc.weights --demo media/input/video.mp4 --saveVideo
+```
+
+# Process image
+Add matplotlib as dependency:
+```
+pip install matplotlib
+```
+
+Then run `img_darkflow.py`:
+```
+python img_darkflow.py 
 ```
