@@ -1,0 +1,8 @@
+version: '2.3'
+services:
+  hello_forever:
+    image: 'alpine:latest'
+    command: sh -c 'while true; do echo Hello World; sleep 5; done'
+  hello_once:
+    image: 'alpine:latest'
+    command: echo Hello World
